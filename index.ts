@@ -1,4 +1,5 @@
 import * as readline from 'readline';
+import * as fs from 'fs';
 
 function caesarCipherEncrypt(text: string, shift: number): string {
     const alphaSize = 32; // В українському алфавіті 32 літери
@@ -43,6 +44,18 @@ rl.question('Введіть текст для шифрування: ', (text) =>
 
             const decryptedText = caesarCipherDecrypt(encryptedText, shift);
             console.log("Розшифрований текст:", decryptedText);
+
+            // Зберігаємо зашифрований текст у файл
+            fs.writeFile('encrypted.txt', encryptedText, (err) => {
+                if (err) throw err;
+                console.log('Зашифрований текст збережено у файл encrypted.txt');
+            });
+
+            // Зберігаємо розшифрований текст у файл
+            fs.writeFile('decrypted.txt', decryptedText, (err) => {
+                if (err) throw err;
+                console.log('Розшифрований текст збережено у файл decrypted.txt');
+            });
         }
 
         rl.close();

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && nodemon index.js"
+    "build_6": "tsc && nodemon index.js",
+    "build_7": "tsc && nodemon lab7.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,5 +13,8 @@
     "nodemon": "^3.1.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.6"
   }
 }
