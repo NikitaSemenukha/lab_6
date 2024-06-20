@@ -3,5 +3,8 @@
 First command
 npm i
 
-second command
-npm run build
+command to debug lab_6
+npm run build_6
+
+command to debug lab_7
+npm run build_7
